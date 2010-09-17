@@ -1,0 +1,15 @@
+h1. Prick.js
+
+h3. A simple web framework for Node.js
+
+p. Took me around 6hrs to write it. Going to sleep now. I know documentation sucks coz there's none. I'll do the docs and then turn it into a CommonJS pkg first thing tomorrow morning.
+
+h2. TODO
+
+* Rewrite some of the path matching code (need to use the url module)
+* Docs
+* turn into CommonJS pkg
+* list this on the node wiki
+* Take a look at how other frameworks handle pattern-based paths.
+
+p. Until then take a look at sample-server.js for clues :)
