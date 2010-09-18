@@ -1,5 +1,5 @@
 { "name" : "prick"
-, "version" : "0.3.1"
+, "version" : "0.3.2"
 , "description" : "A micro web framework for Node.js"
 , "author" : "Akash Manohar J <akash@akash.im>"
 , "main" : "lib/prick"
