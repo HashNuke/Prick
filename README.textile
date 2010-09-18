@@ -42,4 +42,4 @@ h2. Happy message
 p. I'm happy about this coz I wrote this in less than 6hrs. Finally can say...
 bq. "dude, I wrote a web framework" (altho it's tiny).
 
-p. Ok seriously, I wrote this because I needed a nice little framework to handle static files too (and easily). Haven't reached that milestone, but soon will.
+p. Ok seriously, I wrote this because I wanted to learn how frameworks worked and I needed a nice little framework to handle static files too (easily). Haven't reached that milestone, but soon will.
