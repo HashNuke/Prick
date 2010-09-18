@@ -44,8 +44,9 @@ Right now there's no default headers. So this damn thing sounds lengthy. I'll fi
 
 Until then take a look at example.js for some goodness :)
 
-###. Happy message
-p. I'm happy coz I can say...
+### Happy message
+
+I'm happy coz I can say...
 > "dude, I wrote a web framework".
 
-p. Ok seriously, I wrote this because I wanted to learn how frameworks worked and I needed a nice little framework to handle static files too (easily). Haven't reached that milestone, but soon will.
+Ok seriously, I wrote this because I wanted to learn how frameworks worked and I needed a nice little framework to handle static files too (easily). Haven't reached that milestone, but soon will.
