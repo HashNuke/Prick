@@ -7,27 +7,27 @@ There's example.js for you to checkout and the there code is documented.
 
 *   import prick
 
-        `var prick = require('prick');`
+        var prick = require('prick');
 
 *   create a new prick
 
-        `var app = new prick(); // skipping the new keyword is ok too`
+        var app = new prick(); // skipping the new keyword is ok too
 
 *   Start pricking urls
 
-        `app.forPath("/xyz", function(request, response){
+        app.forPath("/xyz", function(request, response){
             response.writeHead(200, {"Content-Type":"text/html"})
             response.write("<h1>hello world</h1>");
             response.end();
-        });`
+        });
 
 *   Incase of a regex url pass a regex object and a match is passed to your callback
 
-        `app.forPath("/xyz", function(request, response, match){
+        app.forPath("/xyz", function(request, response, match){
             response.writeHead(200, {"Content-Type":"text/html"})
             response.write("the match is "+ match);
             response.end();
-        });`
+        });
 
 
 404s are handled based on unfinished responses, so if you leave a request unended... i'll threaten you with a 404 :)
