@@ -7,7 +7,8 @@ var prick = require('prick');
 var app = new prick();
 
 app.forPath("/",function(req,res){
-  res.write("hello world");
+  res.writeHead(200, {"Content-Type":"text/html"})
+  res.write("<b>hello world</b>");
   res.end();
 });
 
@@ -17,12 +18,14 @@ app.forPath("/",function(req,res){
 */
   
 app.forPath("/say",function(req,res){
+  res.writeHead(200, {"Content-Type":"text/plain"})
   res.write("good morning");
   res.end();
 });
 
 // for regex, pass a regex object
 app.forPath(new RegExp("/users/[a-z]*"),function(req,res,match){
+  res.writeHead(200, {"Content-Type":"text/plain"})
   res.write("the path is "+match);
   res.end();
 });

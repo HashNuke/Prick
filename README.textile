@@ -2,14 +2,44 @@ h1. Prick.js
 
 h3. A simple web framework for Node.js
 
-p. Took me around 6hrs to write it. Going to sleep now. I know documentation sucks coz there's none. I'll do the docs and then turn it into a CommonJS pkg first thing tomorrow morning.
+p. There's example.js for you to checkout and it's code is documented.
+
+p. import prick
+@var prick = require('prick');@
+
+p. create a new prick
+@var app = new prick(); // skipping the new keyword is ok too@
+
+p. start pricking urls
+@app.forPath("/xyz", function(request, response){
+    response.writeHead(200, {"Content-Type":"text/html"})
+    response.write("<h1>hello world</h1>");
+    response.end();
+});@
+
+p. Incase of a regex url pass a regex object and a match is passed to your callback
+@app.forPath("/xyz", function(request, response, match){
+    response.writeHead(200, {"Content-Type":"text/html"})
+    response.write("the match is "+ match);
+    response.end();
+});@
+
+p. 404s are handled based on unfinished responses, so if you leave a request unended... i'll threaten you with a 404 :)
+
+p. Right now there's no default headers. So this damn thing sounds lengthy. I'll fix this soon.
 
 h2. TODO
 
-* Rewrite some of the path matching code (need to use the url module)
-* Docs
-* turn into CommonJS pkg
-* list this on the node wiki
-* Take a look at how other frameworks handle pattern-based paths.
+* helpers to set headers and status code
+* Static file handlers
+* WebSocket support (via Faye)
+* Session and cookie support
+* Dependency management
 
-p. Until then take a look at sample-server.js for clues :)
+p. Until then take a look at example.js for some goodness :)
+
+h2. Happy message
+p. I'm happy about this coz I wrote this in less than 6hrs. Finally can say...
+bq. "dude, I wrote a web framework" (altho it's tiny).
+
+p. Ok seriously, I wrote this because I needed a nice little framework to handle static files too (and easily). Haven't reached that milestone, but soon will.
